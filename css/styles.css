@@ -1,0 +1,76 @@
+@import url("https://fonts.cdnfonts.com/css/ketsiyo");
+
+/* Sobrescribe el estilo por defecto y establece el padding y el margen a cero */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Syne", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* Variables */
+
+:root {
+  --primary: #ffffff;
+  --seconadry: #0c1519;
+}
+
+/* Base Styles */
+body {
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--seconadry);
+  color: var(--primary);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+header,
+footer {
+  padding: 3.5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .logo h1,
+nav ul li {
+  font-family: "Syne", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+header nav ul li {
+  font-size: 0.875rem;
+  opacity: 0.56;
+}
+
+header nav ul li:nth-child(1) {
+  opacity: 1;
+}
+
