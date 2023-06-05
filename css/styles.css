@@ -72,8 +72,8 @@ header nav ul li:nth-child(1) {
   opacity: 1;
 }
 
-main .title{
-  font-family: 'Ketsiyo', sans-serif;
+main .title {
+  font-family: "Ketsiyo", sans-serif;
   font-family: "Ketsiyo", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -113,6 +113,7 @@ header {
 header nav {
   display: none;
 }
+
 /* Tablet Styles */
 @media screen and (min-width: 768px) and (max-width: 999px) {
   header {
@@ -130,5 +131,26 @@ header nav {
 
   main > .title p {
     font-size: 5.75rem;
+  }
+}
+
+/* Laptop Styles */
+@media screen and (min-width: 1000px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 250px;
+  }
+  main > .title {
+    grid-row: 1;
+    z-index: 1;
   }
 }
