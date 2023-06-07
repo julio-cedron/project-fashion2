@@ -27,7 +27,7 @@ ul li {
 
 /* Base Styles */
 body {
-  background-image: url(../images/bg.png);
+  background-image: url(bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--seconadry);
@@ -54,7 +54,7 @@ header {
 }
 
 header .logo h1,
-nav ul li {
+ul li {
   font-family: "Syne", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -63,17 +63,18 @@ nav ul li {
   letter-spacing: -0.02em;
 }
 
-header nav ul li {
+header ul li {
   font-size: 0.875rem;
   opacity: 0.56;
 }
 
-header nav ul li:nth-child(1) {
+header ul li:nth-child(1) {
   opacity: 1;
 }
 
-main .title {
-  font-family: "Ketsiyo", sans-serif;
+/* CORRECCIÓN: Antes main .title {} */
+
+main .title p {
   font-family: "Ketsiyo", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -93,7 +94,12 @@ footer {
   letter-spacing: -0.02em;
 }
 
-/* main > * */
+/* Mobile Styles */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
 main > .title,
 main > .image {
@@ -110,7 +116,7 @@ header {
   justify-content: center;
 }
 
-header nav {
+header ul {
   display: none;
 }
 
@@ -120,11 +126,12 @@ header nav {
     justify-content: space-between;
   }
 
-  header nav {
+  header ul {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
   }
+
   main > .title {
     z-index: 1;
   }
@@ -135,21 +142,24 @@ header nav {
 }
 
 /* Laptop Styles */
+
 @media screen and (min-width: 1000px) {
   header {
     justify-content: space-between;
   }
 
-  header nav {
+  header ul {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
   }
+
   .grid {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 250px;
   }
-  main > .title {
+
+  main .title {
     grid-row: 1;
     z-index: 1;
   }
