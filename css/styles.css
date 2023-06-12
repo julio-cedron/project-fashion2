@@ -164,3 +164,9 @@ header ul {
     z-index: 1;
   }
 }
+main .titles p{
+font-size:7.75rem;
+}
+main .image{
+  grid-row: 1/spam2;;
+}
